@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import dashboardLogo from "@/assets/images/logo/CromaAlto.png";
+import dashboardLogo from "@/assets/images/logo/Waro.png";
 import dashboardIconActive_1 from "@/assets/images/dashboard/icon/icon_1_active.svg";
 import dashboardIcon_1 from "@/assets/images/dashboard/icon/icon_1.svg";
 import dashboardIconActive_2 from "@/assets/images/dashboard/icon/icon_2_active.svg";
@@ -83,20 +83,20 @@ const DashboardHeaderOne = ({ isActive, setIsActive }: any) => {
             </li>
             <li className="plr">
               <Link
-                href="/dashboard/station"
+                href="/dashboard/storespot"
                 className={`d-flex w-100 align-items-center ${
-                  pathname === "/dashboard/station" ? "active" : ""
+                  pathname === "/dashboard/storespot" ? "active" : ""
                 }`}
               >
                 <Image
                   src={
-                    pathname === "/dashboard/station"
+                    pathname === "/dashboard/storespot"
                       ? dashboardIconActive_6
                       : dashboardIcon_6
                   }
                   alt=""
                 />
-                <span>Stations</span>
+                <span>Store Spot</span>
               </Link>
             </li>
             <li className="plr">

@@ -100,7 +100,6 @@ const Map = () => {
       setLoading(true);
       try {
         const response = await axios.get(`${BASE_API_URL}api/stores`);
-        // const evStation = await axios.get(`${BASE_API_URL}api/get_ev_stations`);
         setStores(response.data);
       } catch (error) {
         console.error("Error fetching stores:", error);
@@ -423,10 +422,10 @@ const Map = () => {
                             {/* <strong>Transport Cost:</strong> ₹
                             {reallocation.transport_cost.toFixed(2)} <br /> */}
                             <strong>Travel Time:</strong>{" "}
-                            {reallocation.travel_time_min.toFixed(2)} mins{" "}
+                            {reallocation.travel_time_min?.toFixed(2)} mins{" "}
                             <br />
                             <strong>Distance:</strong>{" "}
-                            {reallocation.distance_km.toFixed(2)} km
+                            {reallocation.distance_km?.toFixed(2)} km
                           </li>
                         ))}
                       </ul>
